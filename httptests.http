@@ -1,1 +1,6 @@
-GET http://localhost:3001/api/candidates
+PUT http://localhost:3001/api/candidate/1
+Content-Type: application/json
+
+{
+    "party_id": 4
+}
