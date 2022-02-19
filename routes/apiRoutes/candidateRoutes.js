@@ -3,9 +3,9 @@ const router = express.Router();
 const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
-// GET all  candidates
 router
 .route('/candidates')
+// GET all  candidates
 .get((req, res) => {
     const sql = `SELECT candidates.*, parties.name AS party_name FROM candidates LEFT JOIN parties ON candidates.party_id = parties.id`;
     db.query(sql, (err, rows) => {
